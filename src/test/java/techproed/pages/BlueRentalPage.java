@@ -5,9 +5,10 @@ import org.openqa.selenium.support.PageFactory;
 import techproed.utilities.Driver;
 
 public class BlueRentalPage {
-    public BlueRentalPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public BlueRentalPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
+
     @FindBy(xpath = "(//*[@role='button'])[1]")
     public WebElement login;
     @FindBy(xpath = "//*[@id='formBasicEmail']")
@@ -19,6 +20,10 @@ public class BlueRentalPage {
     public WebElement hataMesaji;
     @FindBy(xpath = "//*[@type='submit']")
     public WebElement login2;
-
-
+    @FindBy(xpath = "//*[@id='dropdown-basic-button']")
+    public WebElement login3;
+    @FindBy(xpath = "//*[text()='Logout']")
+    public WebElement logout;
+    @FindBy(xpath = "//*[text()='OK']")
+    public WebElement ok;
 }

@@ -1,18 +1,14 @@
-package techproed.tests.day28_Listeners;
-
+package techproed.tests.day29_Listeners;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.SkipException;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
 
-public class C03_ListenersTest3 {
-    /*
-        Test class'ımızda fail olma durumu olan bir testin listeners ile tekrar çalışmasını istersek
-    @Test notasyanundan sonra parametre olarak retryAnalyzer yazar ve oluşturmuş olduğumuz ListenersRetry class'ının
-    yolunu belirtiriz.
-     */
+@Listeners(techproed.utilities.Listeners.class)
+public class C01_ListenersTest1 {
     @Test(retryAnalyzer = techproed.utilities.Listeners.class)
     public void test1() {
         System.out.println("PASSED");
